@@ -38,7 +38,9 @@ export default async function BookDetailPage({
   const bookId = (await params).id
   // 获取关联的文章
   const book = await getBookDetail(bookId)
-  console.log(book.chapters)
+  if (!book) {
+    return null
+  }
   return (
     <>
       <NavBreadcrumb
