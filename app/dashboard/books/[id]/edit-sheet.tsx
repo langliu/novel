@@ -96,7 +96,7 @@ export function EditSheet({
           } else {
             form.setValue('title', '')
             form.setValue('content', '')
-            form.setValue('order', `${Number.parseInt(form.getValues('order')) + 1}`)
+            form.setValue('order', Number.parseInt(`${form.getValues('order')}`) + 1)
           }
         } else if (id) {
           await updateArticle(
@@ -129,7 +129,7 @@ export function EditSheet({
 
   const submitAndContinue = () => {
     const formData = form.getValues()
-    handleSubmit({ ...formData, order: Number.parseInt(formData.order) }, false)
+    handleSubmit({ ...formData, order: Number.parseInt(`${formData.order}`) }, false)
   }
 
   useEffect(() => {
