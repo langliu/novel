@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   description:
     '万卷书阁,最新热门小说网站，提供玄幻小说、武侠小说、原创小说、网游小说、都市小说、言情小说、青春小说、科幻小说等,最新章节在线阅读。更多精彩尽在万卷书阁。',
   keywords: ['最新小说', '最新章节', '小说', '小说网', '小说网站', '热门小说', '小说在线阅读'],
+  twitter: {
+    site: '万卷书阁',
+    creator: '@langliu1216'
+  }
 }
 
 export default function RootLayout({
