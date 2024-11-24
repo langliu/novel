@@ -1,16 +1,16 @@
+import { getBook } from '@/actions/books'
 import prisma from '@/lib/prisma'
+import type { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata, ResolvingMetadata } from 'next'
-import { getBook } from '@/actions/books'
 
 type Props = {
   params: Promise<{ id: string }>
 }
 
-export async function generateMetadata (
+export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   // read route params
   const id = (await params).id
@@ -80,7 +80,11 @@ export default async function Page({
       </div>
       <ul className={'grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3 '}>
         {book.articles.map((article) => (
-          <Link href={`/articles/${article.id}`} key={article.id} className={'h-6 line-clamp-1 overflow-hidden text-ellipsis'}>
+          <Link
+            href={`/articles/${article.id}`}
+            key={article.id}
+            className={'line-clamp-1 h-6 overflow-hidden text-ellipsis'}
+          >
             第{article.order}章&nbsp;{article.title}
           </Link>
         ))}

@@ -1,32 +1,33 @@
-import prisma from '@/lib/prisma'
+import { fetchArticle, getPrevAndNextPage } from '@/actions/articles'
+import { getArticle } from '@/app/dashboard/books/[id]/actions'
+import type { Metadata, ResolvingMetadata } from 'next'
 import Link from 'next/link'
 
-function getBookArticles(articleId: string) {
-  // 使用 bookId 过滤 article
-  return prisma.article.findUnique({
-    where: {
-      id: articleId,
-    },
-  })
+type Props = {
+  params: Promise<{ id: string }>
 }
 
-async function gerPrevAndNextPage(bookId: string, order: number) {
-  const res = await prisma.article.findMany({
-    where: {
-      bookId: bookId,
-      order: {
-        in: [order - 1, order + 1],
-      },
-    },
-    select: {
-      id: true,
-      title: true,
-      order: true,
-    },
-  })
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  const id = (await params).id
+  const article = await getArticle(id)
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+  const title = article ? `第${article.order}章 ${article.title} | 万卷书阁` : '万卷书阁'
+  const description = article?.title ?? '万卷书阁'
   return {
-    prev: res.find((item) => item.order === order - 1),
-    next: res.find((item) => item.order === order + 1),
+    title,
+    description,
+    openGraph: {
+      images: [...previousImages],
+      title,
+      description,
+      siteName: '万卷书阁',
+    },
   }
 }
 
@@ -37,48 +38,50 @@ export default async function Page({
 }) {
   const articleId = (await params).id
   // 获取关联的文章
-  const article = await getBookArticles(articleId)
+  const article = await fetchArticle(articleId)
   if (!article) {
     return null
   }
-  const prevAndNextPage = await gerPrevAndNextPage(article?.bookId, article?.order ?? 0)
-  console.log('prevAndNextPage', prevAndNextPage)
+  const prevAndNextPage = await getPrevAndNextPage(article?.bookId, article?.order ?? 0)
+
   return (
-    <div className={'p-4 pt-0'}>
-      <h1 className={'sticky top-0 mb-2 bg-white pt-4 pb-2 font-bold text-xl'}>
-        第{article?.order ?? 1}章 {article?.title ?? ''}
-      </h1>
-      <div className={'mb-2 whitespace-break-spaces leading-6'}>
-        {(article?.content.split('\n') ?? []).map((p, index) => {
-          const key = p + index
-          return (
-            <p key={key} className={'mb-3 font-normal text-lg'}>
-              {p}
-            </p>
-          )
-        })}
-      </div>
-      <div className={'grid grid-cols-3 gap-4 border border-gray-200'}>
-        {prevAndNextPage.prev ? (
-          <Link href={`/articles/${prevAndNextPage.prev.id}`} className={'px-4 py-2 text-center'}>
-            上一章
+    <div className={'bg-orange-50 '}>
+      <div className={'mx-auto max-w-[800px] bg-orange-100 p-4 pt-0 md:p-8'}>
+        <h1 className={'mb-2 font-bold text-xl md:mb-4 md:text-2xl'}>
+          第{article?.order ?? 1}章 {article?.title ?? ''}
+        </h1>
+        <div className={'mb-2 whitespace-break-spaces leading-6'}>
+          {(article?.content.split('\n') ?? []).map((p, index) => {
+            const key = p + index
+            return (
+              <p key={key} className={'mb-3 font-normal text-lg'}>
+                {p}
+              </p>
+            )
+          })}
+        </div>
+        <div className={'grid grid-cols-3 gap-4 border border-gray-200'}>
+          {prevAndNextPage.prev ? (
+            <Link href={`/articles/${prevAndNextPage.prev.id}`} className={'px-4 py-2 text-center'}>
+              上一章
+            </Link>
+          ) : (
+            <div className={'px-4 py-2 text-center text-gray-400'}>上一章</div>
+          )}
+          <Link
+            href={`/books/${article.bookId}`}
+            className={'cursor-pointer border-gray-200 border-r border-l px-4 py-2 text-center'}
+          >
+            目录
           </Link>
-        ) : (
-          <div className={'px-4 py-2 text-center text-gray-400'}>上一章</div>
-        )}
-        <Link
-          href={`/books/${article.bookId}`}
-          className={'cursor-pointer border-gray-200 border-r border-l px-4 py-2 text-center'}
-        >
-          目录
-        </Link>
-        {prevAndNextPage.next ? (
-          <Link className={'px-4 py-2 text-center'} href={`/articles/${prevAndNextPage.next.id}`}>
-            下一章
-          </Link>
-        ) : (
-          <div className={'px-4 py-2 text-center text-gray-400'}>下一章</div>
-        )}
+          {prevAndNextPage.next ? (
+            <Link className={'px-4 py-2 text-center'} href={`/articles/${prevAndNextPage.next.id}`}>
+              下一章
+            </Link>
+          ) : (
+            <div className={'px-4 py-2 text-center text-gray-400'}>下一章</div>
+          )}
+        </div>
       </div>
     </div>
   )

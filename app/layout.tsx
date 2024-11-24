@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   keywords: ['最新小说', '最新章节', '小说', '小说网', '小说网站', '热门小说', '小说在线阅读'],
   twitter: {
     site: '万卷书阁',
-    creator: '@langliu1216'
-  }
+    creator: '@langliu1216',
+  },
 }
 
 export default function RootLayout({
