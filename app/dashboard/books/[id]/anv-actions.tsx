@@ -1,8 +1,10 @@
 'use client'
 
-import { MoreHorizontal, Plus } from 'lucide-react'
-import * as React from 'react'
+import { ChartScatter, FolderInput, MoreHorizontal, Plus } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
+import { updateBookStatic } from '@/actions/books'
 import { EditSheet } from '@/app/dashboard/books/[id]/edit-sheet'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
@@ -15,12 +17,46 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
+import { useToast } from '@/hooks/use-toast'
+import Link from 'next/link'
 
-export function NavActions({ bookId, chapters = 0 }: { bookId: string; chapters: number }) {
-  const [isOpen, setIsOpen] = React.useState(false)
+type Props = {
+  bookId: string
+  chapters?: number
+  /** 静态数据 */
+  statistics: {
+    chapters: number
+    wordCount: number
+  }
+}
+
+export function NavActions({ bookId, chapters = 0, statistics }: Props) {
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+  const { toast } = useToast()
+
   const currentDate = new Intl.DateTimeFormat('zh', {
     dateStyle: 'full',
   }).format(new Date())
+  const importHref = `${pathname}/import`
+
+  const handleUpdate = async () => {
+    try {
+      await updateBookStatic({
+        ...statistics,
+        id: bookId,
+      })
+      setIsOpen(false)
+      toast({
+        title: '更新成功',
+        description: `共更新${statistics.chapters}章`,
+      })
+    } catch (e) {
+      toast({
+        title: '更新失败',
+      })
+    }
+  }
 
   return (
     <div className='flex items-center gap-2 text-sm'>
@@ -48,6 +84,18 @@ export function NavActions({ bookId, chapters = 0 }: { bookId: string; chapters:
                           </SidebarMenuButton>
                         }
                       />
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      <Link href={importHref}>
+                        <SidebarMenuButton>
+                          <FolderInput /> <span>批量导入</span>
+                        </SidebarMenuButton>
+                      </Link>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      <SidebarMenuButton onClick={handleUpdate}>
+                        <ChartScatter /> <span>更新统计信息</span>
+                      </SidebarMenuButton>
                     </SidebarMenuItem>
                   </SidebarMenu>
                 </SidebarGroupContent>

@@ -29,3 +29,42 @@ export async function getPrevAndNextPage(articleId: string, order: number) {
     next: res.find((item) => item.order === order + 1),
   }
 }
+
+export async function batchImportArticles(
+  articles: {
+    bookId: string
+    title: string
+    content: string
+    order: number
+    wordCount: number
+  }[],
+) {
+  const allWords = articles.reduce((prev, curr) => {
+    return prev + curr.wordCount
+  }, 0)
+  return prisma.$transaction(
+    async (tx) => {
+      await tx.article.createMany({
+        data: articles,
+      })
+      // 更新书籍字数和章节数
+      return tx.book.update({
+        where: {
+          id: articles[0].bookId,
+        },
+        data: {
+          wordCount: {
+            increment: allWords,
+          },
+          chapters: {
+            increment: articles.length,
+          },
+        },
+      })
+    },
+    {
+      maxWait: 10000,
+      timeout: 20000,
+    },
+  )
+}

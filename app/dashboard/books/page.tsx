@@ -2,7 +2,7 @@ import { NavBreadcrumb } from '@/components/nav-breadcrumb'
 import { Button } from '@/components/ui/button'
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table'
 import prisma from '@/lib/prisma'
-import { dateFormat } from '@/lib/utils'
+import { dateFormat, wordCountFormat } from '@/lib/utils'
 import { PlusCircle } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -75,7 +75,7 @@ export default async function Home() {
                   <Link href={`/dashboard/books/${book.id}`}>{book.title}</Link>
                 </TableCell>
                 <TableCell>{book.chapters}</TableCell>
-                <TableCell>{book.wordCount}</TableCell>
+                <TableCell>{wordCountFormat(book.wordCount ?? 0)}</TableCell>
                 <TableCell>{dateFormat(book.createdAt)}</TableCell>
                 <TableCell>{dateFormat(book.updatedAt)}</TableCell>
                 <TableCell className={'w-[80px]'}>

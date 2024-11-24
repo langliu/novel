@@ -11,7 +11,6 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  // read route params
   const id = (await params).id
   const article = await getArticle(id)
 
@@ -45,7 +44,7 @@ export default async function Page({
   const prevAndNextPage = await getPrevAndNextPage(article?.bookId, article?.order ?? 0)
 
   return (
-    <div className={'bg-orange-50 '}>
+    <main className={'bg-orange-50 '}>
       <div className={'mx-auto max-w-[800px] bg-orange-100 p-4 pt-0 md:p-8'}>
         <h1 className={'mb-2 font-bold text-xl md:mb-4 md:text-2xl'}>
           第{article?.order ?? 1}章 {article?.title ?? ''}
@@ -83,6 +82,6 @@ export default async function Page({
           )}
         </div>
       </div>
-    </div>
+    </main>
   )
 }

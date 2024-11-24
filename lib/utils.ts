@@ -26,3 +26,16 @@ export function dateFormat(date: Date) {
   })
   return intl.format(date)
 }
+
+/**
+ * 格式化字数
+ *
+ * @param wordCount - 要格式化的字数
+ * @returns 格式化后的字数字符串
+ */
+export function wordCountFormat(wordCount: number) {
+  if (wordCount > 10000) {
+    return `${(wordCount / 10000).toFixed(2)}万字`
+  }
+  return `${wordCount}字`
+}
