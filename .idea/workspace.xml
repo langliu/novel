@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): dsf">
+      <change afterPath="$PROJECT_DIR$/public/basic_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/body_base_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;langliu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:langliu/novel.git&quot;,
+    &quot;accountId&quot;: &quot;3802be6a-a3e2-4401-bccc-9ec309c9197b&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pAQgOf07q5CtFRkxt1j8c11Ebp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Node.js.as.js.executor": "Run",
+    "Node.js.trans.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/liulang/WebstormProjects/novel/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.commit.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.prisma:generate.executor": "Run",
+    "npm.prisma:studio.executor": "Run",
+    "settings.editor.selected.configurable": "Settings.Biome",
+    "ts.external.directory.path": "/Users/liulang/WebstormProjects/novel/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="as.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/as.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="trans.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/trans.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="untitled-1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="/untitled-1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prisma:studio" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma:studio" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.prisma:studio" />
+        <item itemvalue="Node.js.as.js" />
+        <item itemvalue="Node.js.trans.js" />
+        <item itemvalue="Node.js.untitled-1.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="" />
+      <created>1732206511143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732206511143</updated>
+      <workItem from="1732206512323" duration="20435000" />
+      <workItem from="1732434795713" duration="18781000" />
+      <workItem from="1732462720454" duration="615000" />
+      <workItem from="1732463351636" duration="2015000" />
+      <workItem from="1732465395455" duration="3051000" />
+      <workItem from="1732621028310" duration="14405000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: :tada: 初始化项目">
+      <option name="closed" value="true" />
+      <created>1732207541002</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732207541002</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix: 🐛 打包问题修复">
+      <option name="closed" value="true" />
+      <created>1732208002314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732208002314</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: 🐛 打包问题修复">
+      <option name="closed" value="true" />
+      <created>1732208436497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732208436497</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: 🐛 打包问题修复">
+      <option name="closed" value="true" />
+      <created>1732208691988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732208691988</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: ✨ 添加社交媒体支持">
+      <option name="closed" value="true" />
+      <created>1732292660067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732292660067</updated>
+    </task>
+    <task id="LOCAL-00006" summary="style(article): 💄 文章详情页样式优化">
+      <option name="closed" value="true" />
+      <created>1732421942572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732421942572</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(article): 支持批量导入文章">
+      <option name="closed" value="true" />
+      <created>1732461898378</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732461898378</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(article): dsf">
+      <option name="closed" value="true" />
+      <created>1732465559006</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732465559006</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: :tada: 初始化项目" />
+    <MESSAGE value="fix:  打包问题修复" />
+    <MESSAGE value="feat: ✨ 添加社交媒体支持" />
+    <MESSAGE value="style(article):  文章详情页样式优化" />
+    <MESSAGE value="feat(article): 支持批量导入文章" />
+    <MESSAGE value="feat(article): dsf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(article): dsf" />
+  </component>
+</project>

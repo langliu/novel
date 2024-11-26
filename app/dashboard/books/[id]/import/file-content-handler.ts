@@ -8,14 +8,16 @@ function isNumeric(str: string) {
 }
 
 export function fileContentHandler(content: string) {
-  const regex = /正文卷\s第?.+章?\s.+\r\n/g
+  // console.log(content.slice(0, 1000))
+  const regex = /第.+章\s.+\r?\n/g
   const chaptersTitles = content.match(regex)
 
   // 输出每个章节的标题
   const chapterList =
     chaptersTitles
       ?.map((chapter) => {
-        const result = chapter.match(/正文卷\s第?(.+?)章?\s(.+)/)
+        const result = chapter.match(/第?(.+?)章?\s(.+)\r?\n/)
+        console.log(result)
         if (result) {
           const order = isNumeric(result[1]) ? result[1] : nzhcn.decodeS(result[1])
           return {
@@ -26,6 +28,7 @@ export function fileContentHandler(content: string) {
         return null
       })
       .filter((item) => !!item) ?? []
+  // console.log(chapterList)
   // 拆分章节
   const chapters = content.split(regex)
   // 去除每个章节的空行

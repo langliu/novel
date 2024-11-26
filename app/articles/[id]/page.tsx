@@ -44,8 +44,11 @@ export default async function Page({
   const prevAndNextPage = await getPrevAndNextPage(article?.bookId, article?.order ?? 0)
 
   return (
-    <main className={'bg-orange-50 '}>
-      <div className={'mx-auto max-w-[800px] bg-orange-100 p-4 pt-0 md:p-8'}>
+    <main className={'bg-repeat'} style={{ backgroundImage: `url('/body_base_bg.png')` }}>
+      <div
+        className={'mx-auto max-w-[800px] bg-repeat p-4 pt-0 shadow-muted md:p-8'}
+        style={{ backgroundImage: `url('/basic_bg.png')` }}
+      >
         <h1 className={'mb-2 font-bold text-xl md:mb-4 md:text-2xl'}>
           第{article?.order ?? 1}章 {article?.title ?? ''}
         </h1>
