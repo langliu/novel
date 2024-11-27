@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): dsf">
-      <change afterPath="$PROJECT_DIR$/public/basic_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/body_base_bg.png" afterDir="false" />
+    <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): 新功能">
+      <change afterPath="$PROJECT_DIR$/app/articles/[id]/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -160,7 +157,7 @@
       <workItem from="1732462720454" duration="615000" />
       <workItem from="1732463351636" duration="2015000" />
       <workItem from="1732465395455" duration="3051000" />
-      <workItem from="1732621028310" duration="14405000" />
+      <workItem from="1732621028310" duration="18128000" />
     </task>
     <task id="LOCAL-00001" summary="feat: :tada: 初始化项目">
       <option name="closed" value="true" />
@@ -226,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732465559006</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat(article): 新功能">
+      <option name="closed" value="true" />
+      <created>1732643228953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732643228953</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +255,7 @@
     <MESSAGE value="style(article):  文章详情页样式优化" />
     <MESSAGE value="feat(article): 支持批量导入文章" />
     <MESSAGE value="feat(article): dsf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(article): dsf" />
+    <MESSAGE value="feat(article): 新功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(article): 新功能" />
   </component>
 </project>

@@ -27,11 +27,14 @@ type TxtUploaderProps = {
 }
 
 const FormSchema = z.object({
-  start: z.coerce
-    .number({
-      required_error: '请输入起始章节序号',
-    })
-    .min(0, '序号不能小于1'),
+  start: z.preprocess(
+    (value) => Number.parseInt(z.string().parse(value), 10),
+    z
+      .number({
+        required_error: '请输入起始章节序号',
+      })
+      .min(0, '序号不能小于1'),
+  ),
   fileCode: z.enum(['utf-8', 'gbk'], { required_error: '请选择编码' }),
 })
 
@@ -211,9 +214,8 @@ export function TxtUploader({ bookId }: TxtUploaderProps) {
           {fileContent.map((chapter, index) => (
             <Collapsible key={chapter.order + chapter.title}>
               <CollapsibleTrigger className={'py-2'}>
-                {index + 1} 第
-                {form.watch('start') ? Number.parseInt(form.watch('start')) + index : chapter.order}
-                章 {chapter.title} 共{getWordCount(chapter.content)}字
+                {index + 1} 第{form.watch('start') ? form.watch('start') + index : chapter.order}章{' '}
+                {chapter.title} 共{getWordCount(chapter.content)}字
               </CollapsibleTrigger>
               <CollapsibleContent
                 className={'whitespace-pre-line rounded-md bg-gray-100 p-4 text-lg'}
