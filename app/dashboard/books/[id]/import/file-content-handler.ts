@@ -22,7 +22,7 @@ export function fileContentHandler(content: string) {
           const order = isNumeric(result[1]) ? result[1] : nzhcn.decodeS(result[1])
           return {
             order: Number.parseInt(order),
-            title: result[2],
+            title: result?.[2] ?? '',
           }
         }
         return null
@@ -34,7 +34,7 @@ export function fileContentHandler(content: string) {
   // 去除每个章节的空行
   chapters.forEach((chapter, index) => {
     if (index === 0) return // 跳过第一个空章节
-    chapters[index] = chapter.trim()
+    chapters[index] = chapter?.trim()
   })
   return (
     chapterList?.map((chapter, index) => {

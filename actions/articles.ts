@@ -2,7 +2,25 @@
 import prisma from '@/lib/prisma'
 
 export async function fetchArticle(articleId: string) {
-  return prisma.article.findUnique({ where: { id: articleId } })
+  return prisma.article.findUnique({
+    where: { id: articleId },
+    include: {
+      book: {
+        select: {
+          id: true,
+          title: true,
+          cover: true,
+          chapters: true,
+          author: {
+            select: {
+              id: true,
+              name: true,
+            },
+          },
+        },
+      },
+    },
+  })
 }
 
 /**

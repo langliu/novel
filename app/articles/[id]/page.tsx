@@ -1,6 +1,7 @@
 import { fetchArticle, getPrevAndNextPage } from '@/actions/articles'
 import { Pagination } from '@/app/articles/[id]/pagination'
 import { getArticle } from '@/app/dashboard/books/[id]/actions'
+import { NavBreadcrumb } from '@/components/article-breadcrumb'
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
@@ -49,6 +50,13 @@ export default async function Page({
         className={'mx-auto max-w-[800px] bg-repeat p-4 shadow-muted md:p-8'}
         style={{ backgroundImage: `url('/basic_bg.png')` }}
       >
+        <NavBreadcrumb
+          breadcrumbList={[
+            { title: '首页', href: '/' },
+            { title: article?.book?.title ?? '', href: `/books/${article?.bookId}` },
+            { title: article?.title ?? '' },
+          ]}
+        />
         <h1 className={'mb-2 font-bold text-xl md:mb-4 md:text-2xl'}>
           第{article?.order ?? 1}章 {article?.title ?? ''}
         </h1>

@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): 新功能">
-      <change afterPath="$PROJECT_DIR$/app/articles/[id]/pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/articles/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/app-header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/article-breadcrumb.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/articles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/txt-uploader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/liulang/WebstormProjects/novel/public",
+    "last_opened_file_path": "/Users/liulang/WebstormProjects/novel/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +96,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -157,7 +161,7 @@
       <workItem from="1732462720454" duration="615000" />
       <workItem from="1732463351636" duration="2015000" />
       <workItem from="1732465395455" duration="3051000" />
-      <workItem from="1732621028310" duration="18128000" />
+      <workItem from="1732621028310" duration="23155000" />
     </task>
     <task id="LOCAL-00001" summary="feat: :tada: 初始化项目">
       <option name="closed" value="true" />
@@ -231,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732643228953</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat(article): 新功能">
+      <option name="closed" value="true" />
+      <created>1732713539635</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732713539635</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
