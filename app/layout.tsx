@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from '@vercel/analytics/react'
 import type { ReactNode } from 'react'
 
 const geistSans = localFont({
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Toaster />
         {children}
         <GoogleAnalytics gaId={process.env?.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''} />
+        <Analytics />
       </body>
     </html>
   )
