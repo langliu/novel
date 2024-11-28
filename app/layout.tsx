@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
 import type { ReactNode } from 'react'
 
@@ -39,6 +39,7 @@ export default function RootLayout({
         <Toaster />
         {children}
         <GoogleAnalytics gaId={process.env?.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''} />
+        <GoogleTagManager gtmId={process.env?.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID ?? ''} />
         <Analytics />
       </body>
     </html>
