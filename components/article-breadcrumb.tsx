@@ -19,7 +19,7 @@ export function NavBreadcrumb({
   addonAfter?: ReactNode
 }) {
   return (
-    <header className='flex h-16 shrink-0 items-center gap-2'>
+    <header className='hidden h-16 shrink-0 items-center gap-2 md:flex'>
       <div className='flex flex-1 items-center gap-2 text-xl'>
         <Breadcrumb>
           <BreadcrumbList>

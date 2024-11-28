@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { ReactNode } from 'react'
 
 const geistSans = localFont({
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable}${geistMono.variable} antialiased`}>
         <Toaster />
         {children}
+        <GoogleAnalytics gaId={process.env?.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''} />
       </body>
     </html>
   )
