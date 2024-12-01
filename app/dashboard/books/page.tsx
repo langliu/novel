@@ -1,3 +1,4 @@
+import { BookBadge } from '@/app/dashboard/books/book-badge'
 import { NavBreadcrumb } from '@/components/nav-breadcrumb'
 import { Button } from '@/components/ui/button'
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table'
@@ -16,7 +17,15 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic'
 
 async function getBooks() {
-  const books = await prisma.book.findMany()
+  const books = await prisma.book.findMany({
+    include: {
+      author: {
+        select: {
+          name: true,
+        },
+      },
+    },
+  })
   const authors = await prisma.author.findMany()
 
   return {
@@ -56,7 +65,9 @@ export default async function Home() {
             <TableRow className={'font-bold'}>
               <TableCell>书籍封面</TableCell>
               <TableCell>书籍名称</TableCell>
+              <TableCell>作者</TableCell>
               <TableCell>章节数</TableCell>
+              <TableCell>分级</TableCell>
               <TableCell>字数</TableCell>
               <TableCell>创建时间</TableCell>
               <TableCell>更新时间</TableCell>
@@ -74,7 +85,11 @@ export default async function Home() {
                 <TableCell>
                   <Link href={`/dashboard/books/${book.id}`}>{book.title}</Link>
                 </TableCell>
+                <TableCell>{book?.author?.name}</TableCell>
                 <TableCell>{book.chapters}</TableCell>
+                <TableCell>
+                  <BookBadge type={book.bookType} />
+                </TableCell>
                 <TableCell>{wordCountFormat(book.wordCount ?? 0)}</TableCell>
                 <TableCell>{dateFormat(book.createdAt)}</TableCell>
                 <TableCell>{dateFormat(book.updatedAt)}</TableCell>

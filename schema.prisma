@@ -8,6 +8,12 @@ datasource db {
   directUrl = env("NEXT_PUBLIC_POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
+enum BookType {
+  NORMAL // 普通
+  ADULT // 成人
+  CHILDREN // 儿童
+}
+
 model Book {
   id           String              @id @default(uuid())
   title        String              @db.VarChar(255)
@@ -18,11 +24,12 @@ model Book {
   updatedAt    DateTime            @updatedAt @map(name: "updated_at")
   author       Author?             @relation(fields: [authorId], references: [id])
   authorId     String?
-  wordCount    Int?                @default(0) @map(name: "word_count")
+  wordCount    Int                 @default(0) @map(name: "word_count")
   articles     Article[]
   categories   CategoriesOnBooks[]
   endStatus    Boolean             @default(false)
   chapters     Int                 @default(0) // 书籍章节数目
+  bookType     BookType            @default(NORMAL)
 
   @@map("books")
 }
