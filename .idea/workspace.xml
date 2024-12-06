@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): 新功能">
-      <change afterPath="$PROJECT_DIR$/app/articles/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/app-header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/article-breadcrumb.tsx" afterDir="false" />
+    <list default="true" id="f8f0ab07-2f59-4a4b-8947-ccf0192117c5" name="更改" comment="feat(article): 书籍增加分级">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/articles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/books/[id]/import/file-content-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,30 +58,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Node.js.as.js.executor": "Run",
-    "Node.js.trans.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/liulang/WebstormProjects/novel/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.commit.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.prisma:generate.executor": "Run",
-    "npm.prisma:studio.executor": "Run",
-    "settings.editor.selected.configurable": "Settings.Biome",
-    "ts.external.directory.path": "/Users/liulang/WebstormProjects/novel/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Node.js.as.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.trans.js.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.has title.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liulang/WebstormProjects/novel/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.commit.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prisma:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prisma:push.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prisma:studio.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.Biome&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/liulang/WebstormProjects/novel/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -101,14 +106,17 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="as.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/as.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="trans.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/trans.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="untitled-1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="/untitled-1.js" working-dir="$PROJECT_DIR$">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="has title" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/example.spec.ts" />
+      <test-names>
+        <test-name value="has title" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -116,6 +124,16 @@
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prisma:push" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma:push" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -131,13 +149,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Playwright.has title" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.prisma:studio" />
-        <item itemvalue="Node.js.as.js" />
-        <item itemvalue="Node.js.trans.js" />
-        <item itemvalue="Node.js.untitled-1.js" />
+        <item itemvalue="npm.prisma:push" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +189,10 @@
       <workItem from="1732462720454" duration="615000" />
       <workItem from="1732463351636" duration="2015000" />
       <workItem from="1732465395455" duration="3051000" />
-      <workItem from="1732621028310" duration="23155000" />
+      <workItem from="1732621028310" duration="31903000" />
+      <workItem from="1733020850513" duration="844000" />
+      <workItem from="1733022425885" duration="10779000" />
+      <workItem from="1733497682831" duration="359000" />
     </task>
     <task id="LOCAL-00001" summary="feat: :tada: 初始化项目">
       <option name="closed" value="true" />
@@ -243,7 +274,47 @@
       <option name="project" value="LOCAL" />
       <updated>1732713539635</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat(article): 新功能">
+      <option name="closed" value="true" />
+      <created>1732724546471</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732724546471</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(article): 引入谷歌分析">
+      <option name="closed" value="true" />
+      <created>1732806835259</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732806835259</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(article): 引入Vercel分析">
+      <option name="closed" value="true" />
+      <created>1732807315681</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732807315681</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(article): 引入Google Tag Manager">
+      <option name="closed" value="true" />
+      <created>1732809330117</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732809330117</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(article): 书籍增加分级">
+      <option name="closed" value="true" />
+      <created>1733032604908</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733032604908</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +339,10 @@
     <MESSAGE value="feat(article): 支持批量导入文章" />
     <MESSAGE value="feat(article): dsf" />
     <MESSAGE value="feat(article): 新功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(article): 新功能" />
+    <MESSAGE value="feat(article): 引入谷歌分析" />
+    <MESSAGE value="feat(article): 引入Vercel分析" />
+    <MESSAGE value="feat(article): 引入Google Tag Manager" />
+    <MESSAGE value="feat(article): 书籍增加分级" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(article): 书籍增加分级" />
   </component>
 </project>
